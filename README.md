@@ -26,7 +26,7 @@
 alok = {
     "name"       : "Alok Kumar Dash",
     "location"   : "Bhubaneswar, India 🇮🇳",
-    "education"  : "B.Tech CSE (AI) — Gandhi Institute for Technological Advancement (Expected 2026)",
+    "education"  : "B.Tech CSE (AI) — Gandhi Institute for Technological Advancement ",
     "role"       : "Data Scientist | ML Engineer",
     "focus"      : ["Machine Learning", "Deep Learning", "NLP", "Predictive Analytics"],
     "currently"  : "Building AI projects & growing my open-source portfolio",
