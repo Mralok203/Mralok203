@@ -150,30 +150,12 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Mralok203&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mralok203&layout=compact&langs_count=8&theme=tokyonight"/>
-
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Mralok203&theme=tokyonight&hide_border=false)](https://git.io/streak-stats)
-
-</div>
-
----
 
 ## 🐍 Contribution Snake
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Mralok203/Mralok203/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</div>
-
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mralok203&theme=tokyonight" />
+</p>
 ---
 
 ## 📫 Let's Connect
