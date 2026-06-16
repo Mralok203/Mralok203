@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alok Kumar Dash — Data Scientist & ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #111827;
+      --bg3: #1a2235;
+      --accent: #00d4ff;
+      --accent2: #7c3aed;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(255,255,255,0.08);
+      --card: rgba(255,255,255,0.04);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(10,14,26,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 500; font-size: 1.1rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,212,255,0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 80% 80%, rgba(124,58,237,0.08) 0%, transparent 70%);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .hero-tag {
+      display: inline-block; margin-bottom: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem; color: var(--accent);
+      background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2);
+      padding: 0.35rem 1rem; border-radius: 999px; letter-spacing: 0.08em;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem; color: var(--muted); margin-bottom: 2.5rem;
+      max-width: 560px; margin-left: auto; margin-right: auto;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 0.75rem 1.8rem; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; text-decoration: none; transition: all .2s; cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--accent); color: #000;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,255,0.3); }
+    .btn-outline {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    .scroll-indicator {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: var(--muted); font-size: 0.75rem;
+    }
+    .scroll-dot {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-bottom: 0.75rem;
+    }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+    .section-desc { color: var(--muted); max-width: 560px; margin-bottom: 3rem; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg2); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .stat-card {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 1.25rem; border-radius: 12px; text-align: center;
+    }
+    .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+    .about-exp { }
+    .exp-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.25rem 1.5rem; border-radius: 0 12px 12px 0;
+      margin-bottom: 1rem;
+    }
+    .exp-title { font-weight: 600; margin-bottom: 0.2rem; }
+    .exp-company { color: var(--accent); font-size: 0.85rem; }
+    .exp-period { color: var(--muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; }
+
+    /* ── SKILLS ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .skill-category {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 1.5rem; border-radius: 12px;
+    }
+    .skill-cat-title {
+      font-size: 0.8rem; color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tag {
+      background: rgba(0,212,255,0.08); color: var(--text);
+      border: 1px solid rgba(0,212,255,0.15);
+      padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.82rem;
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg2); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .project-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      padding: 1.75rem; border-radius: 16px;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,212,255,0.3);
+      box-shadow: 0 12px 40px rgba(0,212,255,0.08);
+    }
+    .project-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .project-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .project-desc { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.25rem; flex: 1; }
+    .project-metric {
+      display: inline-block; margin-bottom: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; color: #4ade80;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      padding: 0.25rem 0.6rem; border-radius: 6px;
+    }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tech-badge {
+      background: rgba(124,58,237,0.12); color: #c4b5fd;
+      border: 1px solid rgba(124,58,237,0.2);
+      padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem;
+    }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      margin-top: 1.25rem; color: var(--accent); font-size: 0.82rem;
+      text-decoration: none; font-weight: 500;
+    }
+    .project-link:hover { text-decoration: underline; }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+    .cert-card {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 1rem;
+    }
+    .cert-icon { font-size: 1.75rem; flex-shrink: 0; }
+    .cert-name { font-size: 0.88rem; font-weight: 600; }
+    .cert-issuer { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg2); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .contact-info { }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .contact-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15);
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-label { font-size: 0.75rem; color: var(--muted); }
+    .contact-value { font-size: 0.92rem; font-weight: 500; }
+    .contact-value a { color: var(--text); text-decoration: none; }
+    .contact-value a:hover { color: var(--accent); }
+
+    .contact-form { }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.4rem; }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); padding: 0.75rem 1rem; border-radius: 8px;
+      font-family: inherit; font-size: 0.92rem; outline: none;
+      transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.82rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+
+    /* type animation */
+    .typed { border-right: 2px solid var(--accent); animation: blink 0.7s infinite; }
+    @keyframes blink { 0%,100%{border-color:transparent} 50%{border-color:var(--accent)} }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">alok.dev</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-tag">// Available for opportunities</div>
+    <h1>
+      Hi, I'm <span class="gradient-text">Alok Kumar Dash</span>
+    </h1>
+    <p class="hero-subtitle">
+      Data Scientist & ML Engineer — turning raw data into intelligent systems and measurable business impact.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="mailto:alokkumardash913@gmail.com" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">// about me</div>
+        <h2 class="section-title">Building AI that matters</h2>
+        <p>I'm a B.Tech CSE (AI) student at Gandhi Institute for Technological Advancement, Bhubaneswar, graduating in 2026. I specialize in machine learning, deep learning, NLP, and predictive analytics using Python.</p>
+        <p>With 4 internships across AI, data science, software development, and data analytics — I've worked with teams in Bhubaneswar, Hyderabad, Pune, and remotely — building real systems on real data.</p>
+        <p>I care about building things that work: clean models, honest evaluations, and insights you can act on.</p>
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-num">98.42%</div><div class="stat-label">Model Accuracy (Defect Prediction)</div></div>
+          <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Internships Completed</div></div>
+          <div class="stat-card"><div class="stat-num">500K+</div><div class="stat-label">Records Processed</div></div>
+          <div class="stat-card"><div class="stat-num">12%</div><div class="stat-label">Revenue Uplift Projected</div></div>
+        </div>
+      </div>
+      <div class="about-exp">
+        <div class="exp-item">
+          <div class="exp-title">AI Intern</div>
+          <div class="exp-company">Smaket AI, Bhubaneswar</div>
+          <div class="exp-period">Dec 2025 – Feb 2026</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-title">Data Science Intern</div>
+          <div class="exp-company">NullClass (Remote)</div>
+          <div class="exp-period">May 2025 – Jul 2025</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-title">Software Development Intern</div>
+          <div class="exp-company">KTech Products, Hyderabad</div>
+          <div class="exp-period">Jun 2024 – Aug 2024</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-title">Data Analytics Intern</div>
+          <div class="exp-company">PHN Technology, Pune</div>
+          <div class="exp-period">Apr 2023 – Jun 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">// skills</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <p class="section-desc">Every tool I use, I've used on a real project — nothing padded.</p>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="skill-cat-title">Languages & Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">SQL Server</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">XGBoost</span>
+          <span class="skill-tag">AdaBoost</span>
+          <span class="skill-tag">Regression</span>
+          <span class="skill-tag">Classification</span>
+          <span class="skill-tag">Clustering</span>
+          <span class="skill-tag">PCA</span>
+          <span class="skill-tag">SMOTE</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Deep Learning & Computer Vision</div>
+        <div class="skill-tags">
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">CNN</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">Neural Networks</span>
+          <span class="skill-tag">Image Augmentation</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Data Science & Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">EDA</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Statistical Modeling</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">AI & Frameworks</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Hugging Face</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Generative AI</span>
+          <span class="skill-tag">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">MS Excel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">// projects</div>
+    <h2 class="section-title">Featured Work</h2>
+    <p class="section-desc">Real projects. Real data. Real results.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🔍</div>
+        <div class="project-title">Software Defect Prediction</div>
+        <div class="project-metric">98.42% Accuracy</div>
+        <div class="project-desc">ML pipeline to predict software defects on NASA datasets. Applied PCA, SMOTE, and benchmarked XGBoost, AdaBoost, and ELM classifiers.</div>
+        <div class="project-tech">
+          <span class="tech-badge">XGBoost</span>
+          <span class="tech-badge">PCA</span>
+          <span class="tech-badge">SMOTE</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Python</span>
+        </div>
+        <a href="https://github.com/Mralok203" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">😊</div>
+        <div class="project-title">Real-Time Emotion Recognition</div>
+        <div class="project-metric">7 Expressions · Live Webcam</div>
+        <div class="project-desc">CNN-based deep learning app with real-time facial expression detection via webcam. Integrated Tkinter GUI with preprocessing and augmentation pipeline.</div>
+        <div class="project-tech">
+          <span class="tech-badge">CNN</span>
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">OpenCV</span>
+          <span class="tech-badge">Tkinter</span>
+        </div>
+        <a href="https://github.com/Mralok203" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🌿</div>
+        <div class="project-title">Plant Disease Detection AI</div>
+        <div class="project-metric">Gemini API · Natural Language Diagnosis</div>
+        <div class="project-desc">Deep learning system to identify plant diseases from leaf images, with Google Gemini API integration to explain diagnoses and suggest treatments in natural language.</div>
+        <div class="project-tech">
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">Gemini API</span>
+          <span class="tech-badge">Python</span>
+        </div>
+        <a href="https://github.com/Mralok203/plant-disease-detection-ai" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🏥</div>
+        <div class="project-title">Health Care Center</div>
+        <div class="project-metric">SVM + Random Forest · Web App</div>
+        <div class="project-desc">ML web app that predicts diseases based on user-entered symptoms and suggests medicines. Built with Flask and two classification models.</div>
+        <div class="project-tech">
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">SVM</span>
+          <span class="tech-badge">Random Forest</span>
+          <span class="tech-badge">Python</span>
+        </div>
+        <a href="https://github.com/Mralok203/Health-Care-Center-" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🛒</div>
+        <div class="project-title">Diwali Sales Analytics</div>
+        <div class="project-metric">10,000+ Transactions · +12% Revenue Projection</div>
+        <div class="project-desc">End-to-end EDA on 10K+ retail transactions. Identified regional patterns and customer segments; proposed strategies projected to improve revenue by 12%.</div>
+        <div class="project-tech">
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">EDA</span>
+        </div>
+        <a href="https://github.com/Mralok203/diwali_sales-analysis" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🍕</div>
+        <div class="project-title">Pizza Sales SQL Analytics</div>
+        <div class="project-metric">Advanced SQL · Business Intelligence</div>
+        <div class="project-desc">SQL-driven analysis of pizza sales to identify top-selling items, revenue patterns, and peak hours. Insights directly inform inventory and operational decisions.</div>
+        <div class="project-tech">
+          <span class="tech-badge">SQL</span>
+          <span class="tech-badge">Data Analysis</span>
+          <span class="tech-badge">Business Intelligence</span>
+        </div>
+        <a href="https://github.com/Mralok203/pizza-sale" class="project-link">View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-label">// certifications</div>
+    <h2 class="section-title">Credentials</h2>
+    <p class="section-desc" style="margin-bottom:2rem;">Verified skills from industry-recognized programs.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div><div class="cert-name">SAP Generative AI Developer</div><div class="cert-issuer">SAP Certified</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div><div class="cert-name">Full Stack Data Science</div><div class="cert-issuer">NASSCOM</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div><div class="cert-name">Data Analytics</div><div class="cert-issuer">Naresh IT</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div><div class="cert-name">CCNA</div><div class="cert-issuer">Cisco Certified</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">// contact</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-desc">Open to full-time roles, internships, and collaboration in Data Science, ML, and AI.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:alokkumardash913@gmail.com">alokkumardash913@gmail.com</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value"><a href="https://linkedin.com/in/alokkumardash" target="_blank">linkedin.com/in/alokkumardash</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🐙</div>
+          <div><div class="contact-label">GitHub</div><div class="contact-value"><a href="https://github.com/Mralok203" target="_blank">github.com/Mralok203</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Location</div><div class="contact-value">Bhubaneswar, India · Open to Relocation</div></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Jane Smith"/>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="jane@company.com"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Hi Alok, I'd love to discuss a Data Science role at..."></textarea>
+        </div>
+        <a href="mailto:alokkumardash913@gmail.com" class="btn btn-primary" style="display:inline-block">Send via Email →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Built by <a href="https://github.com/Mralok203">Alok Kumar Dash</a> · 2026 · Bhubaneswar, India</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">"Data is the new oil — and I'm here to refine it."</p>
+</footer>
+
+</body>
+</html>
