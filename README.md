@@ -13,9 +13,14 @@
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 &nbsp;
-<a href="mailto:alokkumardash913@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="mailto:alokkumardash913@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 &nbsp;
-<a href="https://mralok203.github.io/Mralok203/"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+<a href="https://mralok203.github.io/-Mralok203.github.io/">
+  <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"/>
+</a>
+
 </div>
 
 ---
@@ -25,8 +30,8 @@
 ```python
 alok = {
     "name"       : "Alok Kumar Dash",
-    "location"   : "Bhubaneswar, India 🇮🇳",
-    "education"  : "B.Tech CSE (AI) — Gandhi Institute for Technological Advancement ",
+    "location"   : "Bhubaneswar, Odisha, India 🇮🇳",
+    "education"  : "B.Tech CSE (AI) — Gandhi Institute for Technological Advancement (Expected 2026)",
     "role"       : "Data Scientist | ML Engineer",
     "focus"      : ["Machine Learning", "Deep Learning", "NLP", "Predictive Analytics"],
     "currently"  : "Building AI projects & growing my open-source portfolio",
@@ -89,15 +94,6 @@ Built a deep learning application using CNN to classify 7 facial expressions in 
 
 ---
 
-### 🛒 Diwali Sales Analytics
-> **10,000+ Transactions · EDA · Business Insights**
-
-Performed end-to-end exploratory data analysis on a 10K+ row retail dataset. Identified regional purchasing patterns, top customer segments, and product category trends. Proposed marketing strategies projected to improve revenue by **12%**.
-
-`Pandas` `Matplotlib` `Seaborn` `EDA` `Python`
-
----
-
 ### 🌿 Plant Disease Detection AI
 > **TensorFlow · Flask · Google Gemini API**
 
@@ -116,6 +112,15 @@ ML-powered web application that predicts diseases based on user-entered symptoms
 
 ---
 
+### 🛒 Diwali Sales Analytics
+> **10,000+ Transactions · EDA · Business Insights**
+
+Performed end-to-end exploratory data analysis on a 10K+ row retail dataset. Identified regional purchasing patterns, top customer segments, and product category trends. Proposed marketing strategies projected to improve revenue by **12%**.
+
+`Pandas` `Matplotlib` `Seaborn` `EDA` `Python`
+
+---
+
 ### 🍕 Pizza Sales Analytics (SQL)
 > **SQL · Business Intelligence · Data Analysis**
 
@@ -125,7 +130,7 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
 
 ---
 
-## 💼 Work Experience Timeline
+## 💼 Work Experience
 
 | Period | Role | Company |
 |--------|------|---------|
@@ -169,8 +174,6 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
   <img src="https://raw.githubusercontent.com/Mralok203/Mralok203/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </div>
 
-> ⚙️ *To enable the snake animation, set up the [GitHub Actions workflow](#) in your profile repo.*
-
 ---
 
 ## 📫 Let's Connect
@@ -180,9 +183,10 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
 | Platform | Link |
 |----------|------|
 | 📧 Email | alokkumardash913@gmail.com |
-| 💼 LinkedIn | [linkedin.com/in/alokkumardash](https://www.linkedin.com/in/alokdashofficial/) |
-| 🌐 Portfolio | [Alok_portfolio.io](https://github.com/Mralok203/Alok_portfolio.io) |
+| 💼 LinkedIn | [linkedin.com/in/alokdashofficial](https://www.linkedin.com/in/alokdashofficial/) |
+| 🌐 Portfolio | [mralok203.github.io](https://mralok203.github.io/Mralok203/) |
 | 📱 Phone | +91-8658290954 |
+| 📍 Location | Bhubaneswar, Odisha, India |
 
 </div>
 
@@ -190,7 +194,7 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
 
 <div align="center">
 
-**⭐ If you like my work, consider starring my repos — it means a lot!**
+⭐ If you like my work, consider starring my repos — it means a lot!
 
 *"Data is the new oil — and I'm here to refine it."*
 
