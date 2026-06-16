@@ -179,7 +179,7 @@ Analyzed pizza sales data using advanced SQL queries to identify best-selling it
 | Platform | Link |
 |----------|------|
 | 📧 Email | alokkumardash913@gmail.com |
-| 💼 LinkedIn | [linkedin.com/in/alokkumardash](https://linkedin.com/in/alokkumardash) |
+| 💼 LinkedIn | [linkedin.com/in/alokkumardash](https://www.linkedin.com/in/alokdashofficial/) |
 | 🌐 Portfolio | [Alok_portfolio.io](https://github.com/Mralok203/Alok_portfolio.io) |
 | 📱 Phone | +91-8658290954 |
 
