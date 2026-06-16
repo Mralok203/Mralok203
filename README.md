@@ -15,7 +15,7 @@
 &nbsp;
 <a href="mailto:alokkumardash913@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 &nbsp;
-<a href="https://github.com/Mralok203/Alok_portfolio.io"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+<a href="[https://github.com/Mralok203/Alok_portfolio.io](https://mralok203.github.io/Mralok203/)"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
 
 </div>
 
