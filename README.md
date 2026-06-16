@@ -9,7 +9,9 @@
 
 <img src="https://komarev.com/ghpvc/?username=Mralok203&style=for-the-badge&color=0e75b6" alt="Profile Views"/>
 &nbsp;
-<a href="[https://www.linkedin.com/in/alokdashofficial](https://www.linkedin.com/in/alokdashofficial)"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/alokdashofficial">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 &nbsp;
 <a href="mailto:alokkumardash913@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 &nbsp;
