@@ -3,7 +3,7 @@
 <!-- Animated Typing Banner -->
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Hi+%F0%9F%91%8B+I'm+Alok+Kumar+Dash;Data+Scientist+%7C+ML+Engineer;Building+AI+that+solves+real+problems;Python+%7C+ML+%7C+Deep+Learning+%7C+NLP" alt="Typing SVG" />
-</a>
+</a> 
 
 <br/>
 
@@ -62,6 +62,7 @@ alok = {
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 
 ### 🧠 AI & Frameworks
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![NLP](https://img.shields.io/badge/NLP-008080?style=for-the-badge)
