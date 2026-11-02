@@ -77,7 +77,7 @@ alok = {
 
 ## 🚀 Featured Projects
 
-### 🔍 Software Defect Prediction System
+### 🔍An Intelligent Machine Learning Model for Software Defect Prediction based on Feature Optimization <A>GOOGLE.COM</A>
 > **Accuracy: 98.42%** | NASA Datasets | XGBoost · PCA · SMOTE · Scikit-learn
 
 Built a production-grade ML pipeline to predict software defects using NASA public datasets. Applied PCA for dimensionality reduction, SMOTE to handle class imbalance, and benchmarked XGBoost, AdaBoost, and ELM classifiers. Achieved industry-leading 98.42% accuracy.
