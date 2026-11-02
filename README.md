@@ -83,7 +83,7 @@ Built an ML pipeline to predict software defects on NASA public datasets. Applie
 
 `XGBoost` `PCA` `SMOTE` `Scikit-learn` `Python`
 
-📄 [Read the paper](https://ieeexplore.ieee.org/document/11717423) · 💻 [LINKDIN POST]([PASTE_REPO_LINK_HERE](https://www.linkedin.com/posts/alokdashofficial_research-machinelearning-artificialintelligence-activity-7497894675920396288-XIGj))
+📄 [Read the paper](https://ieeexplore.ieee.org/document/11717423) · 💻 [LINKDIN POST]([[PASTE_REPO_LINK_HERE](https://www.linkedin.com/posts/alokdashofficial_research-machinelearning-artificialintelligence-activity-7497894675920396288-XIGj)](https://www.linkedin.com/posts/alokdashofficial_research-machinelearning-artificialintelligence-activity-7497894675920396288-XIGj))
 
 ### 😊 Real-Time Emotion Recognition System
 > **CNN · OpenCV · Tkinter · Deep Learning**
