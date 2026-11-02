@@ -76,15 +76,14 @@ alok = {
 ---
 
 ## 🚀 Featured Projects
-
-### 🔍An Intelligent Machine Learning Model for Software Defect Prediction based on Feature Optimization <A>GOOGLE.COM</A>
+### 🔍 An Intelligent Machine Learning Model for Software Defect Prediction based on Feature Optimization
 > **Accuracy: 98.42%** | NASA Datasets | XGBoost · PCA · SMOTE · Scikit-learn
 
-Built a production-grade ML pipeline to predict software defects using NASA public datasets. Applied PCA for dimensionality reduction, SMOTE to handle class imbalance, and benchmarked XGBoost, AdaBoost, and ELM classifiers. Achieved industry-leading 98.42% accuracy.
+Built an ML pipeline to predict software defects on NASA public datasets. Applied PCA for dimensionality reduction and SMOTE to handle class imbalance, then benchmarked XGBoost, AdaBoost, and ELM classifiers, reaching 98.42% accuracy.
 
 `XGBoost` `PCA` `SMOTE` `Scikit-learn` `Python`
 
----
+📄 [Read the paper](https://ieeexplore.ieee.org/document/11717423) · 💻 [LINKDIN POST]([PASTE_REPO_LINK_HERE](https://www.linkedin.com/posts/alokdashofficial_research-machinelearning-artificialintelligence-activity-7497894675920396288-XIGj))
 
 ### 😊 Real-Time Emotion Recognition System
 > **CNN · OpenCV · Tkinter · Deep Learning**
